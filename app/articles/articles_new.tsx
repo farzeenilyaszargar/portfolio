@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface GridSlot {
   colSpan: string;
@@ -21,11 +22,11 @@ interface NewsArticle {
   title: string;
   summary: string;
   image: string;
-  link?:string;
-  skills?:string[];
+  link?: string;
+  skills?: string[];
 }
 
-interface AssignedArticle extends NewsArticle, GridSlot {}
+interface AssignedArticle extends NewsArticle, GridSlot { }
 
 const newsArticles: NewsArticle[] = [
   {
@@ -34,7 +35,7 @@ const newsArticles: NewsArticle[] = [
     summary: "New AI tools enhance early disease detection with unprecedented accuracy.",
     image: "/images/healthcare-ai.png",
     link: "https://example.com/project-three",
-    skills:['JS', "Lol"],
+    skills: ['JS', "Lol"],
 
   },
   {
@@ -121,40 +122,49 @@ const newsArticles: NewsArticle[] = [
 
 // Bento Grid Component
 export default function BentoGrid() {
-  const assignedArticles: AssignedArticle[] = 
+  const assignedArticles: AssignedArticle[] =
     newsArticles.map((article, index) => ({
       ...article,
       ...gridSlots[index % gridSlots.length],
-  }));
+    }));
 
 
 
 
-   return (
-       <div className="w-2/3 mt-5">
-         {newsArticles.length === 0 ? (
-           <p className="text-center text-gray-600">No articles available.</p>
-         ) : (
-   
-           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-5">
-             {assignedArticles.slice(0, 20).map((article) => (
-               <div
-                 key={article.id}
-                 className={`rounded-xl border border-black p-4 shadow-sm hover:shadow-md transition-shadow ${article.colSpan} ${article.rowSpan}`}
-               >
-                 <Image
-                   src={article.image}
-                   alt={article.title}
-                   width={400}
-                   height={200}
-                   className="w-full h-auto object-cover rounded-md mb-2"
-                 />
-                 <h3 className="text-lg font-semibold truncate">{article.title}</h3>
-                 <p className="text-sm text-gray-600 ">{article.summary}</p>
-               </div>
-             ))}
-           </div>
-         )}
-       </div>
-     );
+  return (
+    <div className="w-2/3 mt-5">
+      {newsArticles.length === 0 ? (
+        <p className="text-center text-gray-600">No articles available.</p>
+      ) : (
+
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-5">
+          {assignedArticles.slice(0, 20).map((article) => (
+
+            <div
+              key={article.id}
+              className={`rounded-xl border border-black p-4 shadow-sm hover:shadow-md transition-shadow ${article.colSpan} ${article.rowSpan}`}
+            >
+              <Link href={`/projects/${article.id}`}>
+
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  width={400}
+                  height={200}
+                  className="w-full h-auto object-cover rounded-md mb-2"
+                />
+                <h3 className="text-lg font-semibold truncate">{article.title}</h3>
+                <p className="text-sm text-gray-600 ">{article.summary}</p>
+              </Link>
+
+            </div>
+
+          ))
+          }
+
+        </div>
+
+      )}
+    </div>
+  );
 }

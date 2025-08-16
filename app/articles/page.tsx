@@ -1,15 +1,15 @@
 import Footer from '../../components/footer';
 import Header from '../../components/header';
-import Projects from './projects';
+import Articles from './articles_new';
 
 
-export default function Proj() {
+export default function Home() {
   return (
     <div className='--font-mine flex flex-col items-center ml-20 mr-20'>
       <Header />
-      <h1 className='font-black text-2xl mt-5'>projects</h1>
+      <h1 className='font-black text-2xl mt-5'>articles</h1>
 
-      <Projects />
+      <Articles />
       <Footer />
     </div>
     

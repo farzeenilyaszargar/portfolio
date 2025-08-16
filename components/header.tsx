@@ -18,8 +18,23 @@ interface HeaderProps {
 const headerItems: HeaderProps[] = [    
     { label: "portfolio", href: "/" },
     { label: "projects", href: "/projects" },
+    { label: "games", href: "/games" },
     { label: "contact", href: "/contact" }
 ];
+
+function isRouteActive(href: string, path: string) {
+  // normalize: ensure leading slash, strip trailing slash (except for "/")
+  const norm = (s: string) => {
+    const t = "/" + s.replace(/^\/+/, "");
+    return t.length > 1 ? t.replace(/\/+$/, "") : "/";
+  };
+
+  const base = norm(href);
+  const curr = norm(path);
+
+  if (base === "/") return curr === "/";                            // root is only active on "/"
+  return curr === base || curr.startsWith(base + "/");              // allow any subpath
+}
 
 
 export default function Header() 
@@ -29,10 +44,10 @@ export default function Header()
 
     return (
         <div className="flex justify-around items-center h-12 mt-2 border-b border-black --font-mine w-full">
-            <Link href={'/'} className="text-2xl font-black">Farzeen Ilyas Zargar</Link>
+            <Link href={'/'} className="text-2xl font-black line-clamp-1">Farzeen Ilyas Zargar</Link>
             {
                 headerItems.map((item:HeaderProps) => {
-                    const isActive = pathname === item.href;
+                    const isActive = isRouteActive(item.href, pathname) ;
                     return (
                         <Link key={item.label} href={item.href} className={`hidden md:flex ${isActive?'font-black text-shadow-2xs':''}`}>{item.label}</Link>
                     )}

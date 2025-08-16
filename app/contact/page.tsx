@@ -46,7 +46,7 @@ export default function Home() {
 
               <button
                 onClick={handleCopyEmail}
-                className="inline-flex items-center gap-1  px-3 py-1.5 text-[10px]"
+                className="inline-flex items-center gap-1  px-3 py-1.5 text-[10px] hover:scale-130"
                 aria-live="polite"> {copiedEmail ? "✅" : "📋"}
               </button>
               {!copiedEmail && (
@@ -79,7 +79,7 @@ export default function Home() {
 
               <button
                 onClick={handleCopyPhone}
-                className="inline-flex items-center gap-2  px-3 py-1.5 text-[10px]"
+                className="inline-flex items-center gap-2  px-3 py-1.5 text-[10px] hover:scale-130"
                 aria-live="polite"> {copiedPhone ? "✅" : "📋"}
               </button>
               {!copiedPhone && (
