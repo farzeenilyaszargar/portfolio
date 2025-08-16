@@ -17,8 +17,7 @@ interface HeaderProps {
 
 const headerItems: HeaderProps[] = [    
     { label: "portfolio", href: "/" },
-    { label: "articles", href: "/articles" },
-    { label: "games", href: "/games" },
+    { label: "projects", href: "/projects" },
     { label: "contact", href: "/contact" }
 ];
 

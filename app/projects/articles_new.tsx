@@ -21,6 +21,8 @@ interface NewsArticle {
   title: string;
   summary: string;
   image: string;
+  link?:string;
+  skills?:string[];
 }
 
 interface AssignedArticle extends NewsArticle, GridSlot {}
@@ -31,6 +33,9 @@ const newsArticles: NewsArticle[] = [
     title: "AI Revolutionizes Healthcare Diagnostics",
     summary: "New AI tools enhance early disease detection with unprecedented accuracy.",
     image: "/images/healthcare-ai.png",
+    link: "https://example.com/project-three",
+    skills:['JS', "Lol"],
+
   },
   {
     id: 2,
@@ -110,42 +115,7 @@ const newsArticles: NewsArticle[] = [
     summary: "Robots assist in manufacturing with advanced AI capabilities.",
     image: "/images/ai-robots.png",
   },
-  {
-    id: 15,
-    title: "Music Festival Draws Record Crowds",
-    summary: "A diverse lineup attracts fans from around the world.",
-    image: "/images/music-festival.png",
-  },
-  {
-    id: 16,
-    title: "New Battery Tech Extends EV Range",
-    summary: "Innovative battery design boosts electric vehicle performance.",
-    image: "/images/ev-battery.png",
-  },
-  {
-    id: 17,
-    title: "Archaeologists Uncover Ancient City",
-    summary: "A lost civilization is revealed through groundbreaking excavation.",
-    image: "/images/ancient-city.png",
-  },
-  {
-    id: 18,
-    title: "Food Tech Startup Revolutionizes Dining",
-    summary: "Lab-grown meat gains traction in restaurants worldwide.",
-    image: "/images/food-tech.png",
-  },
-  {
-    id: 19,
-    title: "Cybersecurity Threats on the Rise",
-    summary: "Experts warn of increasing cyberattacks on critical infrastructure.",
-    image: "/images/cybersecurity.png",
-  },
-  {
-    id: 20,
-    title: "Olympic Athletes Break World Records",
-    summary: "Stunning performances mark a historic year for the Olympics.",
-    image: "/images/olympics.png",
-  },
+
 ];
 
 
