@@ -16,7 +16,7 @@ export const projects: ProjProps[] = [
         id: 'games',
         title: "Coding Games in JS",
         description: "i made snake, flappy bird and ping pong game in JS. you can check it out on this website",
-        linkWeb: "/games",
+        linkWeb: "/game",
         webAvail:true,
 
         img: "/imgs/games.png",
@@ -49,7 +49,7 @@ export const projects: ProjProps[] = [
         id: 'lunoir',
 
         title: "Lunoir Wear",
-        description: "a marketplace for selling my tshirts.",
+        description: "a marketplace for selling my tshirts. get the craziest but high quality shirts only at lunoirwear",
         linkWeb: "https://www.lunoirwear.com/",
         img: "/imgs/lunoir.png",
         skills: ["Next.js", "TailwindCSS", "TypeScript"],
@@ -73,7 +73,7 @@ export const projects: ProjProps[] = [
         id: 'lightpost',
 
         title: "LightPost",
-        description: "an ai powered web app where you get constant updates curated by ai to be unbiased and can rant anonymously without login. stay truly anonymous and speak your mind to the world! ",
+        description: "an ai powered web app where you get constant updates curated by ai to be unbiased and can rant anonymously without login. ",
         linkWeb: "https://www.lunoirwear.com/",
         img: "/imgs/lightpost.png",
         skills: ["Next.js", "TailwindCSS", "Supabase", "PostgressSQL"],

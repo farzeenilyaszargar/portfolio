@@ -6,3 +6,51 @@
 {
   font-family: 'Noto_Serif_SM', sans-serif;
 }
+
+
+@keyframes obstacle
+{
+  0%
+  {
+    left: 47.5rem;
+  }
+  100%
+  {
+    left:-2.5rem;
+  }
+}
+
+
+.obs_anim
+{
+  animation: obstacle 1.5s infinite linear;
+}
+
+
+@keyframes jump
+{
+  0%
+  {
+    top: 7.5rem;
+  }
+  45%
+  {
+    top: 1rem;
+
+  }
+  65%
+  {
+    top: 1rem;
+
+  }
+  100%
+  {
+    top:7.5rem;
+  }
+}
+
+.jump { animation: jump 0.5s; }
+
+
+
+

@@ -104,8 +104,8 @@ export default function AlternatingSlideshowSync({
         <div
             className="
         mx-auto w-full relative overflow-hidden mt-5
-        [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
-        [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
+        [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]
+        [-webkit-mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]
       "
             style={{ paddingTop: shiftPx, paddingBottom: shiftPx }}
         >

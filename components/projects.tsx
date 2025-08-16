@@ -19,7 +19,7 @@ const getRandomTailwindColor = (): string => {
 
 const cards = projects.map((project: ProjProps, index) => (
 
-                        <Link href={project.webAvail ? `${project.linkWeb}` : `/projects/${project.id}`} key={index} className={`border border-black rounded flex flex-col items-center h-100 justify-around min-w-full text-center`}>
+                        <Link href={project.webAvail ? `${project.linkWeb}` : `/projects/${project.id}`} key={index} className={`border border-black rounded-xl p-1 flex flex-col items-center h-100 justify-around min-w-full text-center`}>
                             <h2 className="font-black p-1 text-xl ml-3 mr-3 mt-1">{project.title}</h2>
                             
                             <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl
@@ -63,7 +63,7 @@ export default function Projects() {
             </ProjectsDisp>
 
             
-            <Link href={'/projects'} className='border p-2 mt-10 rounded-2xl text-center w-1/2 flex flex-row justify-center items-center'>
+            <Link href={'/projects'} className='border p-2 mt-10 rounded-2xl bg-white text-center w-1/2 flex flex-row justify-center items-center mb-10 hover:invert'>
                 <Image src={LinkIcon} alt={'lol'} width={15} height={15} className='mr-1 w-4 h-4 ' />
                 Check Out All My Projects!
             

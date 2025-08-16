@@ -43,7 +43,7 @@ export default function Proj({ params }: { params: { id: string } }) {
 
                 {
                     proj.skills.map((skill) => (
-                                <p id={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
+                                <p className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
                
                 ))
                 }
