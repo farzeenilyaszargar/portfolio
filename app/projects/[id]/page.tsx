@@ -7,12 +7,30 @@ import Link from "next/link";
 
 
 const tailwindColors: string[] = [
-    'text-red-500', 'text-blue-500', 'text-green-500', 'text-yellow-500',
-    'text-purple-500', 'text-indigo-500', 'text-pink-500', 'text-teal-500'
+     "text-red-500",
+    "text-blue-400",
+    "text-green-600",
+    "text-yellow-300",
+    "text-purple-700",
+    "text-pink-500",
+    "text-indigo-400",
+    "text-teal-600",
+    "text-orange-500",
+    "text-cyan-400",
+    "text-lime-600",
+    "text-emerald-500",
+    "text-violet-600",
+    "text-rose-400",
+    "text-fuchsia-500",
+    "text-sky-600",
+    "text-amber-400",
+    "text-stone-500",
+    "text-gray-700",
+    "text-zinc-600",
 ];
 
 const getRandomTailwindColor = (): string => {
-    const colorName: string = tailwindColors[Math.floor(Math.random() * 8)]
+    const colorName: string = tailwindColors[Math.floor(Math.random() * tailwindColors.length)]
     return colorName;
 };
 
@@ -32,7 +50,16 @@ export default function Proj({ params }: { params: { id: string } }) {
                     ? <Link href={proj.linkWeb} className="border rounded-xl pl-2 pr-2 bg-white transition-all duration-100 ease-in hover:invert">Check Out Here!</Link>
                     : <></>}
                 
-                <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-2/3 rounded-lg mt-5 edge-fade">
+                 {
+                    proj.users?
+                <li className="border rounded-full mt-3 pl-2 pr-2 text-green-500">Users: {proj.users}</li>
+:
+<></>
+                }
+                
+                
+                
+                <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-black ">
 
                 </Image>
 
@@ -47,10 +74,9 @@ export default function Proj({ params }: { params: { id: string } }) {
                 }
                 </div>
 
-                <p className="m-7">{proj.fullInfo}</p>
+                <p className="w-9/10 mt-3 text-justify">{proj.fullInfo}</p>
 
-
-                
+               
 
              
 

@@ -47,7 +47,7 @@ export default function Experience() {
             <div className="">
                 {exp.map((experience) => (
                     <div key={experience.name} className="mb-2 border p-2 rounded-4xl flex flex-row justify-around items-center">
-                        <Image src={experience.logo} alt={experience.name} width={40} height={40} className="w-12 h-12 flex items-center justify-center bg-black rounded-full mr-2 ml-2" />
+                        <Image src={experience.logo} alt={experience.name} width={40} height={40} className="w-12 h-12 flex items-center border-none justify-center bg-black rounded-full mr-2 ml-2" />
 
                         <div className="pb-2 pt-1 w-3/4">
                             <p className='font-bold'>{experience.name}<span className='text-xs font-light'> ({experience.time})</span></p>

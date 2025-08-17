@@ -47,6 +47,17 @@ export const projects: ProjProps[] = [
 
     },
 
+    {
+        id: 'extension',
+        title: "Time Manager Extension",
+        description: "an extension i made to track my time spendings with a dashboard. it gives warnings after set thresholds ",
+        img: "/imgs/extension.png",
+        skills: ["Next.js", "TailwindCSS"],
+        webAvail:false,
+        fullInfo:"not made yet!"
+
+    },
+
     
     {
         id: 'music-player',
@@ -93,16 +104,6 @@ export const projects: ProjProps[] = [
         webAvail:false,
         fullInfo:'This project delivers a fast, reliable Sudoku solver and generator with clean interfaces and strong correctness guarantees. At its core is a hybrid solving engine: constraint propagation (naked/hidden singles, candidate elimination by units, pairs/triples) to shrink the search space, followed by depth-first backtracking with heuristics (MRV/least-remaining-values and forward checking). For advanced performance, an optional exact-cover backend (Algorithm X with Dancing Links) can be toggled for benchmarking or very hard puzzles. The solver validates inputs (no duplicates per row/column/box), detects unsatisfiable boards, and verifies uniqueness of solutions. A generator builds fresh puzzles by carving from complete grids and testing uniqueness, with difficulty estimated from the sequence of techniques required. The project ships with a CLI for batch solving/generation, a minimal web UI for interactive play and hints, and a test suite covering canonical edge cases. Clear module boundaries make it easy to embed the engine in other apps (mobile, desktop, or web workers). Documentation includes an API guide, technique glossary, and performance notes.'
         
-    },
-    {
-        id: 'extension',
-        title: "Time Manager Extension",
-        description: "an extension i made to track my time spendings with a dashboard. it gives warnings after set thresholds ",
-        img: "/imgs/sudoku.jpg",
-        skills: ["Next.js", "TailwindCSS"],
-        webAvail:false,
-        fullInfo:"not made yet!"
-
     },
 
     {

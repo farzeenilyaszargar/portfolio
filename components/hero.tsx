@@ -9,7 +9,7 @@ export default function HeroSection()
         <div className="rounded flex flex-col mt-7 w-2/3 p-2 ">
             <div className='flex flex-row justify-between items-top'>
                 <div>
-                    <h1 className='font-medium text-3xl'>I&apos;m a</h1>
+                    <h1 className='font-normal text-3xl'>I&apos;m a</h1>
                     {/*<Image src='/soft-dev.gif' alt='gif' width={400} height={300}></Image>*/}
                     <h1 className='font-black text-3xl hover:border-b-2  transition-all duration-50'>Software Developer</h1>
 
