@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body
+{
+  font-family: var(--font-cursive);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes marq
+{
+  0%{transform: translateX(0%);}
+  100%{transform: translateX(-100%);}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.marq{
+  animation: marq 15s linear infinite;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.edge-fade
+{
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent); 
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent); 
+  mask-repeat: no-repeat; 
+  mask-size: 100% 100%; 
+  -webkit-mask-repeat: no-repeat; 
+  -webkit-mask-size: 100% 100%;
 }
