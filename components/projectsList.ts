@@ -13,15 +13,41 @@ export interface ProjProps {
 
 export const projects: ProjProps[] = [
     {
-        id: 'games',
-        title: "Coding Games in JS",
-        description: "i made snake, flappy bird and ping pong game in JS. you can check it out on this website",
-        linkWeb: "/game",
+        id: 'lightpost',
+
+        title: "LightPost",
+        description: "an ai powered web app where you get constant updates curated by ai to be unbiased and can rant anonymously without login. ",
+        linkWeb: "https://www.lunoirwear.com/",
+        img: "/imgs/lightpost.png",
+        skills: ["Next.js", "TailwindCSS", "Supabase", "PostgressSQL"],
+        webAvail:true,
+        users: 23698
+
+    },
+    {
+        id: 'race',
+
+        title: "Algo Race",
+        description: "race between different algotithms visualized for better understanding! ",
+        img: "/imgs/algos.jpeg",
+        skills: ["C/C++", "GraphQL", "DSA Concepts"],
+        webAvail:false,
+
+    },
+     {
+        id: 'lunoir',
+
+        title: "Lunoir Wear",
+        description: "a marketplace for selling my tshirts. get the craziest but high quality shirts only at lunoirwear",
+        linkWeb: "https://www.lunoirwear.com/",
+        img: "/imgs/lunoir.png",
+        skills: ["Next.js", "TailwindCSS", "TypeScript"],
+        users: 98,
         webAvail:true,
 
-        img: "/imgs/games.png",
-        skills: ["JavaScript", "Next.js"]
     },
+
+    
     {
         id: 'music-player',
         title: "AI Music Player",
@@ -45,19 +71,7 @@ export const projects: ProjProps[] = [
         fullInfo:"This placeholder brief describes a modular home security system built with Raspberry Pi and Python. The objective is dependable detection, quick notification, and easy extension without proprietary lock-in. The core service runs on Raspberry Pi OS, installed as a systemd unit for automatic startup and graceful restarts. A Pi Camera or USB webcam provides video; OpenCV performs motion analysis via background subtraction, morphology filters, and contour heuristics to suppress noise from shadows or small pets. Optional PIR sensors on GPIO pins offer low-power wake triggers and corroboration. Door/window status is supported with magnetic reed switches; a piezo buzzer provides local chirps for arm, disarm, and alarm states. Configuration lives in a human-readable YAML file: arming schedules, sensitivity thresholds, detection zones, clip length, storage limits, and notification channels. When motion is confirmed, the system captures timestamped JPEG bursts or short H.264 segments, writes structured logs, and pushes alerts through email, Telegram, or generic webhooks. A circular disk buffer enforces retention, with spillover to a NAS via SMB/NFS when available. A lightweight Flask dashboard exposes live preview, event history, and settings. Token-based auth protects access; all endpoints prefer HTTPS behind a reverse proxy such as Caddy. The UI emphasizes large status badges, quick arm/disarm controls, and per-sensor health indicators. Health checks verify camera availability, disk space, and clock drift; self-repair routines attempt reconnection before escalating. Development follows a multi-package layout: core detection, devices, notifications, storage, and web UI. Tests include unit coverage for detectors, property tests for state machines, and integration tests with sample clips. Observability uses Python’s logging plus OpenTelemetry traces when enabled. A Makefile and install script handle provisioning, udev rules, and service registration. The roadmap includes person detection with a tiny model, MQTT and Home Assistant integration, secure remote access through Tailscale, multi-camera federation, and an export tool for law-enforcement handoff. Documentation covers wiring diagrams, troubleshooting, and upgrade paths."
 
     },
-    {
-        id: 'lunoir',
-
-        title: "Lunoir Wear",
-        description: "a marketplace for selling my tshirts. get the craziest but high quality shirts only at lunoirwear",
-        linkWeb: "https://www.lunoirwear.com/",
-        img: "/imgs/lunoir.png",
-        skills: ["Next.js", "TailwindCSS", "TypeScript"],
-        users: 98,
-        webAvail:true,
-
-    },
-
+   
 
     {
         id: 'to-do',
@@ -69,18 +83,7 @@ export const projects: ProjProps[] = [
         
     },
 
-    {
-        id: 'lightpost',
-
-        title: "LightPost",
-        description: "an ai powered web app where you get constant updates curated by ai to be unbiased and can rant anonymously without login. ",
-        linkWeb: "https://www.lunoirwear.com/",
-        img: "/imgs/lightpost.png",
-        skills: ["Next.js", "TailwindCSS", "Supabase", "PostgressSQL"],
-        webAvail:true,
-        users: 23698
-
-    },
+    
     {
         id: 'sudoku-solver',
         title: "Sudoku Solver Algorithm",
@@ -90,6 +93,16 @@ export const projects: ProjProps[] = [
         webAvail:false,
         fullInfo:'This project delivers a fast, reliable Sudoku solver and generator with clean interfaces and strong correctness guarantees. At its core is a hybrid solving engine: constraint propagation (naked/hidden singles, candidate elimination by units, pairs/triples) to shrink the search space, followed by depth-first backtracking with heuristics (MRV/least-remaining-values and forward checking). For advanced performance, an optional exact-cover backend (Algorithm X with Dancing Links) can be toggled for benchmarking or very hard puzzles. The solver validates inputs (no duplicates per row/column/box), detects unsatisfiable boards, and verifies uniqueness of solutions. A generator builds fresh puzzles by carving from complete grids and testing uniqueness, with difficulty estimated from the sequence of techniques required. The project ships with a CLI for batch solving/generation, a minimal web UI for interactive play and hints, and a test suite covering canonical edge cases. Clear module boundaries make it easy to embed the engine in other apps (mobile, desktop, or web workers). Documentation includes an API guide, technique glossary, and performance notes.'
         
+    },
+    {
+        id: 'extension',
+        title: "Time Manager Extension",
+        description: "an extension i made to track my time spendings with a dashboard. it gives warnings after set thresholds ",
+        img: "/imgs/sudoku.jpg",
+        skills: ["Next.js", "TailwindCSS"],
+        webAvail:false,
+        fullInfo:"not made yet!"
+
     },
 
     {

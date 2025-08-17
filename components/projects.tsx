@@ -66,10 +66,14 @@ export default function Projects() {
                         ))
                     }
                 </div>
+
+                <div className='absolute top-0 left-0 h-full w-full z-5 bg-white opacity-35'>
+
+                </div>
                 
-                <Link href={'/projects'} className='border border-black z-10 p-2 mt-10 rounded-2xl bg-white text-black text-center w-1/2 flex flex-row 
-                                                    justify-center items-center mb-10 hover:invert absolute top-1/3 left-1/4 shadow-[0_0_50px_rgba(0,0,0,70)]'>
-                    <Image src={'/icons/link.png'} alt={'lol'} width={15} height={15} className='mr-1 w-4 h-4 ' />
+                <Link href={'/projects'} className='group border border-black z-10 p-2 mt-10 rounded-2xl bg-white text-black text-center w-1/2 flex flex-row 
+                                                    justify-center items-center mb-10 hover:bg-black hover:text-white absolute top-1/3 left-1/4 shadow-[0_0_20px_rgba(0,0,0,1)]'>
+                    <Image src={'/icons/link.png'} alt={'lol'} width={15} height={15} className='mr-1 w-4 h-4 child group-hover:invert' />
                     Check Out All My Projects!
 
                 </Link>
