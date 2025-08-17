@@ -1,6 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { projects, ProjProps } from "@/components/projectsList";
+import { projects } from "@/components/projectsList";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,14 +35,14 @@ const getRandomTailwindColor = (): string => {
     return colorName;
 };
 
-type PageProps = {
+type ProjPageProps = {
     params: {
         id: string;
     };
 };
 
 
-export default function Proj({ params }: PageProps) {
+export default function Proj({ params }: ProjPageProps) {
     const proj = projects.find((it) => it.id === params.id);
     if (!proj) return notFound();
     return (
@@ -93,10 +93,4 @@ export default function Proj({ params }: PageProps) {
 
         </div>
     );
-}
-
-export function generateStaticParams() {
-    return projects.map((p) => ({
-        id: p.id,
-    }));
 }
