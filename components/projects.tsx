@@ -1,7 +1,6 @@
 
 import Link from 'next/link';
 import Image from "next/image";
-import LinkIcon from '@/public/icons/link.png';
 import { projects, type ProjProps } from "./projectsList";
 
 const tailwindColors: string[] = [
@@ -23,14 +22,14 @@ export default function Projects() {
     
 
     return (
-        <div className="lg:w-2/3 mt-7 flex flex-col items-center">
+        <div className="w-2/3 mt-7 flex flex-col items-center">
             <h1 className="text-xl font-bold mb-3 w-full">Projects</h1>
 
             {/*------------------------------------*/}
 
 
 
-            <div className="w-full flex flex-row relative rounded-2xl overflow-hidden edge-fade">
+            <div className="w-full flex flex-row relative rounded-2xl overflow-hidden">
                 <div className='flex flex-row h-full marq gap-5 mr-5 mt-5 mb-5'>
                     {
                         projects.map((project: ProjProps, index) => (
@@ -67,13 +66,18 @@ export default function Projects() {
                         ))
                     }
                 </div>
-                <div className='h-full w-full absolute opacity-10 bg-black z-5 top-0'>
-                </div>
-                <Link href={'/projects'} className='border border-white z-10 p-2 mt-10 rounded-2xl bg-black text-white text-center w-1/2 flex flex-row justify-center items-center mb-10 hover:invert absolute top-1/3 left-1/4'>
-                    <Image src={LinkIcon} alt={'lol'} width={15} height={15} className='mr-1 w-4 h-4 ' />
+                
+                <Link href={'/projects'} className='border border-black z-10 p-2 mt-10 rounded-2xl bg-white text-black text-center w-1/2 flex flex-row 
+                                                    justify-center items-center mb-10 hover:invert absolute top-1/3 left-1/4 shadow-[0_0_50px_rgba(0,0,0,70)]'>
+                    <Image src={'/icons/link.png'} alt={'lol'} width={15} height={15} className='mr-1 w-4 h-4 ' />
                     Check Out All My Projects!
 
                 </Link>
+                <div className="absolute top-0 left-0 h-full w-12 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
+                <div className="absolute top-0 right-0 h-full w-12 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>
+                <div className="absolute top-0 left-0 w-full h-6 pointer-events-none bg-gradient-to-b from-white to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full h-6 pointer-events-none bg-gradient-to-t from-white to-transparent"></div>
+
             </div>
 
 

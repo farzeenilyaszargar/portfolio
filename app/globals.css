@@ -12,16 +12,13 @@ body
 }
 
 .marq{
-  animation: marq 15s linear infinite;
+  animation: marq 25s linear infinite;
 }
 
 
 .edge-fade
 {
   mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent); 
-  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent); 
+  mask-image: linear-gradient(to bottom, transparent, black 3%, black 97%, transparent); 
   mask-repeat: no-repeat; 
-  mask-size: 100% 100%; 
-  -webkit-mask-repeat: no-repeat; 
-  -webkit-mask-size: 100% 100%;
 }
