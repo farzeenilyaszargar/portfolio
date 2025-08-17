@@ -1,6 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { projects } from "@/components/projectsList";
+import { projects, ProjProps } from "@/components/projectsList";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,7 +41,8 @@ type PageProps = {
   };
 };
 
-export default async function Proj( { params }: PageProps ) {
+
+export default function Proj({ params }: { params: { id: string } }) {
     const proj = projects.find((it) => it.id === params.id);
     if (!proj) return notFound();
     return (
