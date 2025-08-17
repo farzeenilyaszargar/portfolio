@@ -6,8 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
 const tailwindColors: string[] = [
-     "text-red-500",
+    "text-red-500",
     "text-blue-400",
     "text-green-600",
     "text-yellow-300",
@@ -34,15 +35,14 @@ const getRandomTailwindColor = (): string => {
     return colorName;
 };
 
-
 type PageProps = {
-  params: {
-    id: string;
-  };
+    params: {
+        id: string;
+    };
 };
 
 
-export default function Proj({ params }: { params: { id: string } }) {
+export default function Proj({ params }: PageProps) {
     const proj = projects.find((it) => it.id === params.id);
     if (!proj) return notFound();
     return (
@@ -54,36 +54,36 @@ export default function Proj({ params }: { params: { id: string } }) {
                 {proj.linkWeb
                     ? <Link href={proj.linkWeb} className="border rounded-xl pl-2 pr-2 bg-white transition-all duration-100 ease-in hover:invert">Check Out Here!</Link>
                     : <></>}
-                
-                 {
-                    proj.users?
-                <li className="border rounded-full mt-3 pl-2 pr-2 text-green-500">Users: {proj.users}</li>
-:
-<></>
+
+                {
+                    proj.users ?
+                        <li className="border rounded-full mt-3 pl-2 pr-2 text-green-500">Users: {proj.users}</li>
+                        :
+                        <></>
                 }
-                
-                
-                
+
+
+
                 <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-black ">
 
                 </Image>
 
-                
+
                 <div className="flex flex-row mt-5">
 
-                {
-                    proj.skills.map((skill) => (
-                                <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
-               
-                ))
-                }
+                    {
+                        proj.skills.map((skill) => (
+                            <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
+
+                        ))
+                    }
                 </div>
 
                 <p className="w-9/10 mt-3 text-justify">{proj.fullInfo}</p>
 
-               
 
-             
+
+
 
 
 
@@ -93,4 +93,10 @@ export default function Proj({ params }: { params: { id: string } }) {
 
         </div>
     );
+}
+
+export function generateStaticParams() {
+    return projects.map((p) => ({
+        id: p.id,
+    }));
 }
