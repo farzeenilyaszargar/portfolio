@@ -1,6 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { projects, type ProjProps } from "@/components/projectsList";
+import { projects } from "@/components/projectsList";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,7 +41,7 @@ export default function Proj({ params }: { params: { id: string } }) {
 
                 {
                     proj.skills.map((skill) => (
-                                <p className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
+                                <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
                
                 ))
                 }
