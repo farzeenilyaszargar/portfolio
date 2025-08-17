@@ -37,7 +37,7 @@ const getRandomTailwindColor = (): string => {
 
 
 
-export default function Proj({ params }: { params: { id: string } }) {
+export default async function Proj({ params } : { params: { id: string } }) {
     const proj = projects.find((it) => it.id === params.id);
     if (!proj) return notFound();
     return (
