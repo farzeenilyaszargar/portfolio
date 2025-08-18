@@ -29,14 +29,13 @@ export default function Projects() {
 
 
 
-            <div className="w-full flex flex-row relative rounded-2xl overflow-hidden">
-                <div className='flex flex-row h-full marq gap-5 mr-5 mt-5 mb-5'>
+            <div className="w-full flex flex-row relative rounded-2xl overflow-hidden ">
+                <div className='flex flex-row h-full marq gap-5 mr-5 mt-5 mb-5 '>
                     {
                         projects.map((project: ProjProps, index) => (
                         <Link href={project.webAvail ? `${project.linkWeb}` : `/projects/${project.id}`} key={index} className={`border border-black rounded-xl p-1 flex flex-col items-center justify-around w-70  text-center`}>
                             <h2 className="font-black p-1 text-xl ml-3 mr-3 mt-1">{project.title}</h2>
                             <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl" />
-                            <p className="m-4 text-gray-500 text-center font-light">{project.description}</p>
                             <div className="flex flex-row min-w-full items-center justify-center flex-wrap  mb-5">
                                 {
                                     project.skills.map((pSkills, index) => (
@@ -54,7 +53,6 @@ export default function Projects() {
                         <Link href={project.webAvail ? `${project.linkWeb}` : `/projects/${project.id}`} key={index} className={`border border-black rounded-xl p-1 flex flex-col items-center justify-around w-70  text-center`}>
                             <h2 className="font-black p-1 text-xl ml-3 mr-3 mt-1">{project.title}</h2>
                             <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl" />
-                            <p className="m-4 text-gray-500 text-center font-light">{project.description}</p>
                             <div className="flex flex-row min-w-full items-center justify-center flex-wrap  mb-5">
                                 {
                                     project.skills.map((pSkills, index) => (
@@ -67,7 +65,7 @@ export default function Projects() {
                     }
                 </div>
 
-                <div className='absolute top-0 left-0 h-full w-full z-5 bg-white opacity-35'>
+                <div className='absolute top-0 left-0 h-full w-full z-5 bg-white opacity-25'>
 
                 </div>
                 

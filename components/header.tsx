@@ -65,16 +65,17 @@ export default function Header()
             <button className={`md:hidden flex items-center justify-center text-black text-4xl z-10 ${isOpen?'hidden':''}`} onClick={()=>{setIsOpen(!isOpen)}}>
                 <Image src={"/icons/menu.png"} alt="download-icon" className="w-5 h-5 mr-1 mt-0.5" width={25} height={25}/>
             </button>
-
-            <button className={`md:hidden flex items-center justify-center text-white text-4xl z-10 ${isOpen?'':'hidden'}`} onClick={()=>{setIsOpen(!isOpen)}}>
-                <Image src={"/icons/cross.png"} alt="download-icon" className="w-7 h-7 mr-1 mt-0.5 invert" width={25} height={25}/>
-                
+            <button className={`md:hidden flex  text-white text-4xl z-21 ${isOpen?'':'hidden'}`} onClick={()=>{setIsOpen(!isOpen)}}>
+                    <Image src={"/icons/cross.png"} alt="download-icon" className="w-7 h-7 mr-1 mt-0.5 invert" width={25} height={25}/>
             </button>
+
+            
 
             {/*-------------------*/}
 
 
-            <div className={`bg-black opacity-85 w-2/3 h-screen text-white absolute top-0 right-0 items-center pt-20 ${isOpen?'flex flex-col':'hidden'}`}>
+            <div className={`md:hidden bg-black opacity-85 w-2/3 h-screen fixed text-white top-0 right-0 pt-20 z-20 items-center ${isOpen?'flex flex-col':'hidden'}`}>
+                
                 <Link href="/" className="block py-2 text-2xl">portfolio</Link>
                 <Link href="/projects" className="block py-2 text-2xl">projects</Link>
                 <Link href="/contact" className="block py-2 text-2xl">contact</Link>

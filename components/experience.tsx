@@ -17,7 +17,7 @@ const exp: ExpProps[] = [
         name: "Superflights",
         desc: "Cofounded out of college to make a site for people to share their flights and travel experiences. It is a OTA for travelers.",
         time: "2023-Present",
-        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        link: "https://www.superflights.co.in/",
         role: "COO & Co-founder",
         logo: "/icons/SuperflightsLogo.jpeg"
     },
@@ -25,7 +25,7 @@ const exp: ExpProps[] = [
         name: "Google",
         desc: "Worked on the flutter programming language. helping to make it better. important for mobile development.",
         time: "2022-2023",
-        link: "https://reactjs.org/",
+        link: "https://flutter.dev/",
         role: "Frontend Development",
         logo: "/icons/GoogleLogo.jpeg"
     },
@@ -33,7 +33,7 @@ const exp: ExpProps[] = [
         name: "Fizzy Co.",
         desc: "Selling Electronics. I started this company to sell electronics and gadgets online. It is a small business that I run.",
         time: "2025-Present", 
-        link: "https://nextjs.org/",
+        link: "https://fizzy.co",
         role: "Founder",
         logo: "/icons/FizzyLogo.png"
     }

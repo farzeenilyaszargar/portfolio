@@ -32,7 +32,7 @@ export default function Home() {
   }
 
   return (
-    <div className='--font-mine flex flex-col items-center ml-20 mr-20'>
+    <div className=''>
       <Header />
       <div className='h-160 flex justify-center items-center '>
 

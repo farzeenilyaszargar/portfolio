@@ -18,7 +18,7 @@ const ICONS: IconDef[] = [
   { title: "Supabase", path: siSupabase.path },
   { title: "MySQL", path: siGo.path },
   { title: "Figma", path: siTypescript.path },
-  { title: "pandas", path: siRaspberrypi.path },
+  { title: "Raspberry Pi", path: siRaspberrypi.path },
   { title: "GraphQL", path: siGraphql.path },
   { title: "CSS", path: siCss.path },
   { title: "Github", path: siGithub.path },

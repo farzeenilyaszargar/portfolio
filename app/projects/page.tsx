@@ -47,7 +47,7 @@ export default function ProjectPage() {
       <Header />
       <div className="w-screen flex flex-col justify-center items-center mt-10">
         <h1 className="font-black text-2xl mb-10">projects</h1>
-        <div className="w-2/3 grid grid-cols-2 gap-5">
+        <div className="w-2/3 grid md:grid-cols-2 grid-cols-1 gap-5">
           <div className="flex flex-col gap-5">
             {
               leftItems.map((proj: ProjProps) => (
