@@ -1,6 +1,8 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto_Slab } from "next/font/google";
+
 
 const cursive = Roboto_Slab({
   subsets: ["latin"],
@@ -20,10 +22,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+
   return (
     <html lang="en">
       <body className={`${cursive.variable}`}>
-        {children}
+            {children}
       </body>
     </html>
   );

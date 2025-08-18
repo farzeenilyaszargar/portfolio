@@ -44,7 +44,7 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
   if (!proj) return notFound();
   
     return (
-        <div className='--font-mine flex flex-col items-center justify-center ml-20 mr-20'>
+        <div className='flex flex-col items-center justify-between min-h-screen m-0 p-0'>
             <Header />
             <div className="w-2/3 flex flex-col justify-center items-center  mt-10">
                 <h1 className="font-black text-2xl mt-5">{proj.title}</h1>
