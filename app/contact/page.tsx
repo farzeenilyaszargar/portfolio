@@ -32,9 +32,9 @@ export default function Home() {
   }
 
   return (
-    <div className=''>
+    <div className='h-screen flex flex-col justify-between'>
       <Header />
-      <div className='h-160 flex justify-center items-center '>
+      <div className=' flex justify-center items-center '>
 
         <div className=' border border-black bg-white text-black flex flex-col p-5  rounded-2xl justify-center items-center'>
           <h1 className='font-black text-2xl mb-2'>contact me</h1>
