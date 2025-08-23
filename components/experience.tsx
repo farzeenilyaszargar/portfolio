@@ -15,14 +15,7 @@ interface ExpProps {
 const exp: ExpProps[] = [
    
    
-    {
-        name: "Fizzy Co.",
-        desc: "Selling Electronics. I started this company to sell electronics and gadgets online. It is a small business that I run.",
-        time: "2027-Present", 
-        link: "https://fizzy.co",
-        role: "Founder",
-        logo: "/icons/FizzyLogo.png"
-    },
+    
      {
         name: "Superflights",
         desc: "Cofounded out of college to make a site for people to share their flights and travel experiences. It is a OTA for travelers.",
@@ -47,7 +40,7 @@ export default function Experience() {
             <h1 className="text-xl font-bold mb-3">Experience</h1>
             <div className="">
                 {exp.map((experience) => (
-                    <div key={experience.name} className="mb-2 border p-2 rounded-4xl flex flex-row justify-around items-center">
+                    <div key={experience.name} className="mb-2 border p-2 rounded-4xl flex flex-row justify-around items-center border-border">
                         <Image src={experience.logo} alt={experience.name} width={40} height={40} className="w-12 h-12 flex items-center border-none justify-center bg-black rounded-full mr-2 ml-2" />
 
                         <div className="pb-2 pt-1 w-3/4">
@@ -57,12 +50,12 @@ export default function Experience() {
                         </div>
                         {
                             experience.link ? (
-                            <Link href={experience.link} className="bg-white text-black p-1 rounded-2xl border border-black 
-                                                                    flex flex-row items-center justify-center m-1
+                            <Link href={experience.link} className="bg-background text-text p-1 rounded-2xl border border-border 
+                                                                    flex flex-row items-center justify-center m-1 
                                                                     hover:filter hover:invert overflow-hidden  md:w-27 w-15 h-10 text-nowrap">
-                                <Image src={LinkIcon} alt={experience.name} width={15} height={15} className='mr-1 w-3 h-3'/>
+                                <Image src={LinkIcon} alt={experience.name} width={15} height={15} className='mr-1 w-3 h-3 mt-0.5 invert-[var(--my-invert)]'/>
                                 <p className='hidden md:block'>Check Out</p>
-                            </Link>): <div className='bg-white text-black p-1 rounded-2xl  
+                            </Link>): <div className=' p-1 rounded-2xl  
                                                                     flex flex-row items-center justify-center m-1
                                                                     overflow-hidden  md:w-27 w-15 h-10 text-nowrap'></div>
 }

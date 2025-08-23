@@ -43,7 +43,7 @@ const getRandomTailwindColor = (): string => {
 
 export default function ProjectPage() {
   return (
-    <div className="">
+    <div className="bg-background text-text overflow-hidden">
       <Header />
       <div className="w-screen flex flex-col justify-center items-center mt-10">
         <h1 className="font-black text-2xl mb-10">projects</h1>
@@ -51,7 +51,7 @@ export default function ProjectPage() {
           <div className="flex flex-col gap-5">
             {
               leftItems.map((proj: ProjProps) => (
-                <Link key={proj.id} href={`/projects/${proj.id}`} className="border rounded-2xl overflow-hidden">
+                <Link key={proj.id} href={`/projects/${proj.id}`} className="border border-border rounded-2xl overflow-hidden">
                   <div className="relative ">
                     <Image src={proj.img} alt={proj.title} width={200} height={100} className="min-w-full" />
                     <div className="absolute bottom-0 left-0 w-full h-10 "></div>
@@ -73,7 +73,7 @@ export default function ProjectPage() {
           <div className="flex flex-col gap-5">
             {
               rightItems.map((proj: ProjProps) => (
-                <Link key={proj.id} href={`/projects/${proj.id}`} className="border rounded-2xl overflow-hidden">
+                <Link key={proj.id} href={`/projects/${proj.id}`} className="border border-border rounded-2xl overflow-hidden">
                   <div className="relative ">
                     <Image src={proj.img} alt={proj.title} width={200} height={100} className="min-w-full " unoptimized/>
                     <div className="absolute bottom-0 left-0 w-full h-10"></div>

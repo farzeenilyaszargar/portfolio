@@ -32,15 +32,15 @@ export default function Home() {
   }
 
   return (
-    <div className='h-screen flex flex-col justify-between'>
+    <div className='h-screen flex flex-col justify-between bg-background text-text'>
       <Header />
       <div className=' flex justify-center items-center '>
 
-        <div className=' border border-black bg-white text-black flex flex-col p-5  rounded-2xl justify-center items-center'>
+        <div className=' border border-border bg-background text-text flex flex-col p-5  rounded-2xl justify-center items-center'>
           <h1 className='font-black text-2xl mb-2'>contact me</h1>
           <div className='flex flex-row items-center w-fit  '>
             <p className=' text-right font-bold mr-1'>email:</p>
-            <p className=' border-b border-transparent transition-all duration-300 ease-in-out hover:border-black'>farzeenilyaszargar@gmail.com</p>
+            <p className=' border-b border-transparent transition-all duration-300 ease-in-out hover:border-text'>farzeenilyaszargar@gmail.com</p>
             <div className="relative inline-block group">
 
               <button
@@ -104,8 +104,8 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-row items-center gap-3 mt-2'>
-            <Link href="https://www.github.com/farzenilyaszargar" className="hover:scale-120"><Image src={'/icons/github.svg'} alt='github' width={30} height={30}></Image></Link>
-            <Link href="https://www.linkedin.com/in/farzeenilyaszargar/" className="hover:scale-120"><Image src={'/icons/linkedin.svg'} alt='linkedin' width={30} height={30}></Image></Link>
+            <Link href="https://www.github.com/farzenilyaszargar" className="hover:scale-120"><Image src={'/icons/github.svg'} alt='github' width={30} height={30} className="invert-[var(--my-invert)]"></Image></Link>
+            <Link href="https://www.linkedin.com/in/farzeenilyaszargar/" className="hover:scale-120"><Image src={'/icons/linkedin.svg'} alt='linkedin' width={30} height={30} className="invert-[var(--my-invert)]"></Image></Link>
           </div>
         </div>
 

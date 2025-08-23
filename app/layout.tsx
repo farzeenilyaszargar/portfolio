@@ -24,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en">
-      <body className={`${cursive.variable} light`}>
+      <body className={`${cursive.variable}`}>
         {children}
       </body>
     </html>

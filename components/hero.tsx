@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,10 +21,10 @@ export default function HeroSection()
                      </div>
                 <div className='flex flex-row'>
                     <Link href="https://github.com/farzeenilyaszargar">
-                        <Image src={'/icons/github.svg'} alt='github' className='w-10 h-10  hover:scale-110' width={25} height={25} />
+                        <Image src={'/icons/github.svg'} alt='github' className={`w-10 h-10  hover:scale-110  invert-[var(--my-invert)]`} width={25} height={25} />
                     </Link>
                     <Link href="https://www.linkedin.com/in/farzeenilyaszargar/">
-                        <Image src={'/icons/linkedin.svg'} alt='linkedin' className='w-10 h-10 hover:scale-110' width={25} height={25} />
+                        <Image src={'/icons/linkedin.svg'} alt='linkedin' className='w-10 h-10 hover:scale-110 invert-[var(--my-invert)]' width={25} height={25} />
                     </Link>
                 </div>
                 

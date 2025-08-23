@@ -4,15 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 interface HeaderProps {
-    label:string, 
-    href:string; 
+    label: string,
+    href: string;
 };
 
-const headerItems: HeaderProps[] = [    
+const headerItems: HeaderProps[] = [
     { label: "portfolio", href: "/" },
     { label: "projects", href: "/projects" },
     { label: "contact", href: "/contact" }
@@ -20,62 +20,86 @@ const headerItems: HeaderProps[] = [
 
 function isRouteActive(href: string, path: string) {
     const norm = (s: string) => {
-    const t = "/" + s.replace(/^\/+/, "");
-    return t.length > 1 ? t.replace(/\/+$/, "") : "/";
-  };
+        const t = "/" + s.replace(/^\/+/, "");
+        return t.length > 1 ? t.replace(/\/+$/, "") : "/";
+    };
 
-  const base = norm(href);
-  const curr = norm(path);
+    const base = norm(href);
+    const curr = norm(path);
 
-  if (base === "/") return curr === "/";                            
-  return curr === base || curr.startsWith(base + "/");             
+    if (base === "/") return curr === "/";
+    return curr === base || curr.startsWith(base + "/");
 }
 
 
-export default function Header() 
-{
+export default function Header() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+    useEffect(() => {
+        const stored = localStorage.getItem("darkMode");
+        if (stored !== null) {
+            setDarkMode(JSON.parse(stored));
+        }
+    }, []);
+
+    // Save to localStorage whenever darkMode changes
+    useEffect(() => {
+        localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    }, [darkMode]);
+
 
     return (
-        <div className="flex justify-around items-center h-12 mt-2 border-b border-black --font-mine w-full">
+        <div className="flex justify-around items-center h-12 mt-2 border-b border-border --font-mine w-full ">
             <Link href={'/'} className="text-2xl font-bold line-clamp-1">Farzeen Ilyas Zargar</Link>
             {/*-------------------*/}
             {
-                headerItems.map((item:HeaderProps) => {
-                    const isActive = isRouteActive(item.href, pathname) ;
+                headerItems.map((item: HeaderProps) => {
+                    const isActive = isRouteActive(item.href, pathname);
                     return (
-                        <Link key={item.label} href={item.href} className={`hidden md:flex ${isActive?'font-black text-shadow-2xs':''}`}>{item.label}</Link>
-                    )}
+                        <Link key={item.label} href={item.href} className={`hidden md:flex ${isActive ? 'font-black text-shadow-2xs' : 'font-light'}`}>{item.label}</Link>
+                    )
+                }
                 )
             }
             {/*-------------------*/}
 
-            <Link href={'/resume.pdf'} className="border border-black bg-white items-center p-1 pl-2 pr-3 pb-1 rounded-2xl filter invert hover:filter-none hidden md:flex">
-                <Image src={"/icons/download.png"} alt="download-icon" className="w-4 h-4 mr-1 mt-0.5" width={25} height={25}/>
+
+            <button onClick={() => {
+                setDarkMode(!darkMode)
+                document.documentElement.classList.toggle('dark');
+            }
+            }>
+                {
+                    darkMode ? ('☀️') : ('🌙')
+                }
+            </button>
+            <Link href={'/resume.pdf'} className={`border  items-center p-1 pl-2 pr-3 pb-1 rounded-2xl  hidden md:flex hover:invert bg-background`}>
+                <Image src={"/icons/download.png"} alt="download-icon" className={`w-4 h-4 mr-1 mt-0.5 invert-[var(--my-invert)]`} width={25} height={25}  />
                 resume
 
             </Link>
 
-          
+
+
 
             {/*-------------------*/}
 
 
-            <button className={`md:hidden flex items-center justify-center text-black text-4xl z-10 ${isOpen?'hidden':''}`} onClick={()=>{setIsOpen(!isOpen)}}>
-                <Image src={"/icons/menu.png"} alt="download-icon" className="w-5 h-5 mr-1 mt-0.5" width={25} height={25}/>
+            <button className={`md:hidden flex items-center justify-center text-black text-4xl z-10 ${isOpen ? 'hidden' : ''}`} onClick={() => { setIsOpen(!isOpen) }}>
+                <Image src={"/icons/menu.png"} alt="download-icon" className={`w-5 h-5 mr-1 mt-0.5 invert-[var(--my-invert)]`} width={25} height={25} />
             </button>
-            <button className={`md:hidden flex  text-white text-4xl z-21 ${isOpen?'':'hidden'}`} onClick={()=>{setIsOpen(!isOpen)}}>
-                    <Image src={"/icons/cross.png"} alt="download-icon" className="w-7 h-7 mr-1 mt-0.5 invert" width={25} height={25}/>
+            <button className={`md:hidden flex  text-white text-4xl z-21 ${isOpen ? '' : 'hidden'}`} onClick={() => { setIsOpen(!isOpen) }}>
+                <Image src={"/icons/cross.png"} alt="download-icon" className="w-7 h-7 mr-1 mt-0.5 invert" width={25} height={25} />
             </button>
 
-            
+
 
             {/*-------------------*/}
 
 
-            <div className={`md:hidden bg-black opacity-85 w-2/3 h-screen fixed text-white top-0 right-0 pt-20 z-20 items-center ${isOpen?'flex flex-col':'hidden'}`}>
-                
+            <div className={`md:hidden bg-black opacity-85 w-2/3 h-screen fixed text-white top-0 right-0 pt-20 z-20 items-center ${isOpen ? 'flex flex-col' : 'hidden'}`}>
+
                 <Link href="/" className="block py-2 text-2xl">portfolio</Link>
                 <Link href="/projects" className="block py-2 text-2xl">projects</Link>
                 <Link href="/contact" className="block py-2 text-2xl">contact</Link>

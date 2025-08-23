@@ -68,8 +68,8 @@ export default function Skills()
             
                 ICONS.map((skill, id) => (
                     <div key={id} 
-                    className={`flex flex-row items-center w-fit min-w-fit ml-1 mr-1 border 
-                                rounded-2xl mt-2 p-2 bg-white transition-colors duration-200 hover:bg-black hover:text-white 
+                    className={`flex flex-row items-center w-fit min-w-fit ml-1 mr-1 border border-border text-text bg-background
+                                rounded-2xl mt-2 p-2  hover:invert
                                 `}>
                         <BrandIcon  key={skill.title} {...skill} size={20} />
                         <p className="ml-2 text-sm">{skill.title}</p>
