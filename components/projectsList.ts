@@ -9,27 +9,18 @@ export interface ProjProps {
     skills: string[];
     users?: number;
     fullInfo?:string;
+    features?: string[];
+    moreImgs?: string[];
 }
 
 export const projects: ProjProps[] = [
-    {
-        id: 'lightpost',
-
-        title: "LightPost",
-        description: "an ai powered web app where you get constant updates curated by ai to be unbiased and can rant anonymously without login. ",
-        linkWeb: "https://www.lunoirwear.com/",
-        img: "/imgs/lightpost.png",
-        skills: ["Next.js", "TailwindCSS", "Supabase", "PostgressSQL"],
-        webAvail:true,
-        users: 23698
-
-    },
+    
     {
         id: 'race',
 
         title: "Algo Race",
         description: "race between different algotithms visualized for better understanding! ",
-        img: "/imgs/algos.jpeg",
+        img: "/imgs/algos.gif",
         skills: ["C/C++", "GraphQL", "DSA Concepts"],
         webAvail:false,
 
@@ -40,7 +31,7 @@ export const projects: ProjProps[] = [
         title: "Lunoir Wear",
         description: "a marketplace for selling my tshirts. get the craziest but high quality shirts only at lunoirwear",
         linkWeb: "https://www.lunoirwear.com/",
-        img: "/imgs/lunoir.png",
+        img: "/imgs/lunoir.gif",
         skills: ["Next.js", "TailwindCSS", "TypeScript"],
         users: 98,
         webAvail:true,
@@ -48,22 +39,33 @@ export const projects: ProjProps[] = [
     },
 
     {
-        id: 'extension',
-        title: "Time Manager Extension",
-        description: "an extension i made to track my time spendings with a dashboard. it gives warnings after set thresholds ",
-        img: "/imgs/extension.png",
-        skills: ["Next.js", "TailwindCSS"],
+        id: 'your-time',
+
+        title: "Time Is Yours (Web Extension)",
+        description: "a web extension that tracks your time spent on websites and gives you a detailed report of your time usage.",
+        linkWeb: "https://github.com/farzeenilyaszargar/time-is-yours-extension/",
+        img: "/imgs/ext.gif",
+        skills: ["JS", "HTML", "CSS"],
         webAvail:false,
-        fullInfo:"not made yet!"
+        fullInfo: "This project is a web extension designed to track the time users spend on various websites, providing detailed reports on their time usage. The extension aims to help users understand their online habits and improve productivity by visualizing time spent across different sites. It features a user-friendly interface that displays time statistics, allowing users to set goals and receive reminders for excessive usage. The extension is built using JavaScript, HTML, and CSS, ensuring compatibility with major browsers. It includes options for customizing tracking preferences and generating weekly or monthly reports to analyze trends in web activity.",
+        features: ["Time tracking for websites",
+            "Detailed reports on time usage",
+            "User-friendly interface",
+            "Compatibility with major browsers"],
+        moreImgs: [
+                "/imgs/ext2.png",
+                "/imgs/ext3.png"
+
+            ]
 
     },
 
     
     {
         id: 'music-player',
-        title: "AI Music Player",
-        description: "i made this music player to learn rust and apply the first fundamentals of music using AI to make great suggestions.",
-        img: "/imgs/music.png",
+        title: "Calypso Music AI",
+        description: "i made this AI to distinguish music based on actual musical values and not predective values of the user.",
+        img: "/imgs/calypso.gif",
         webAvail:false,
 
         skills: ["Rust"],
@@ -99,7 +101,7 @@ export const projects: ProjProps[] = [
         id: 'sudoku-solver',
         title: "Sudoku Solver Algorithm",
         description: "solves sudoku with multiple algotithms",
-        img: "/imgs/sudoku.jpg",
+        img: "/imgs/sudoku.gif",
         skills: ["Next.js", "TailwindCSS"],
         webAvail:false,
         fullInfo:'This project delivers a fast, reliable Sudoku solver and generator with clean interfaces and strong correctness guarantees. At its core is a hybrid solving engine: constraint propagation (naked/hidden singles, candidate elimination by units, pairs/triples) to shrink the search space, followed by depth-first backtracking with heuristics (MRV/least-remaining-values and forward checking). For advanced performance, an optional exact-cover backend (Algorithm X with Dancing Links) can be toggled for benchmarking or very hard puzzles. The solver validates inputs (no duplicates per row/column/box), detects unsatisfiable boards, and verifies uniqueness of solutions. A generator builds fresh puzzles by carving from complete grids and testing uniqueness, with difficulty estimated from the sequence of techniques required. The project ships with a CLI for batch solving/generation, a minimal web UI for interactive play and hints, and a test suite covering canonical edge cases. Clear module boundaries make it easy to embed the engine in other apps (mobile, desktop, or web workers). Documentation includes an API guide, technique glossary, and performance notes.'
@@ -110,7 +112,7 @@ export const projects: ProjProps[] = [
         id: 'img-ascii',
         title: "Convert Image to ASCII Characters",
         description: "just upload files to convert Image to ASCII characters with shadings!",
-        img: "/imgs/ascii.jpeg",
+        img: "/imgs/ascii.gif",
         skills: ["HTML", "CSS", "JavaScript", "Python"],
         webAvail:true,
         linkWeb: "https://www.lunoirwear.com/",

@@ -38,11 +38,11 @@ const getRandomTailwindColor = (): string => {
 
 
 
-export default async function ProjectPage({ params, }: { params: Promise<{ id: string }>;}) {
-  const { id } = await params;
-  const proj = projects.find((p) => p.id === id);
-  if (!proj) return notFound();
-  
+export default async function ProjectPage({ params, }: { params: Promise<{ id: string }>; }) {
+    const { id } = await params;
+    const proj = projects.find((p) => p.id === id);
+    if (!proj) return notFound();
+
     return (
         <div className='flex flex-col items-center justify-between min-h-screen m-0 p-0'>
             <Header />
@@ -59,12 +59,12 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
                         :
                         <></>
                 }
+                <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-black " unoptimized/>
 
 
 
-                <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-black ">
 
-                </Image>
+
 
 
                 <div className="flex flex-row mt-5">
@@ -78,6 +78,34 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
                 </div>
 
                 <p className="w-9/10 mt-3 text-justify">{proj.fullInfo}</p>
+
+                {
+                    proj.features?.length ? (
+                        <div className="mt-5 ">
+                            <h1 className="text-2xl font-bold text-center">FEATURES</h1>
+                            <ul className="list-disc ml-5 mt-3">
+                                {proj.features.map((feature, index) => (
+                                    <li key={index} className="text-zinc-500">{feature}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : <></>
+                }
+
+
+
+                
+
+                {
+
+                    proj.moreImgs?.map((img, index) => (
+                        <Image key={index+1} src={img} alt={`${proj.title} image ${index + 1}`} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-black" />
+                    ))
+
+
+
+
+                }
 
 
 

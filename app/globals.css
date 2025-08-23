@@ -16,11 +16,6 @@ body
 }
 
 
-.edge-fade
-{
-  mask-image: linear-gradient(to bottom, transparent, black 3%, black 97%, transparent); 
-  mask-repeat: no-repeat; 
-}
 
 
 /* globals.css */

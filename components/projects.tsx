@@ -35,7 +35,7 @@ export default function Projects() {
                         projects.map((project: ProjProps, index) => (
                         <Link href={project.webAvail ? `${project.linkWeb}` : `/projects/${project.id}`} key={index} className={`border border-black rounded-xl p-1 flex flex-col items-center justify-around w-70  text-center`}>
                             <h2 className="font-black p-1 text-xl ml-3 mr-3 mt-1">{project.title}</h2>
-                            <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl" />
+                            <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl" unoptimized/>
                             <div className="flex flex-row min-w-full items-center justify-center flex-wrap  mb-5">
                                 {
                                     project.skills.map((pSkills, index) => (
@@ -52,7 +52,7 @@ export default function Projects() {
                         projects.map((project: ProjProps, index) => (
                         <Link href={project.webAvail ? `${project.linkWeb}` : `/projects/${project.id}`} key={index} className={`border border-black rounded-xl p-1 flex flex-col items-center justify-around w-70  text-center`}>
                             <h2 className="font-black p-1 text-xl ml-3 mr-3 mt-1">{project.title}</h2>
-                            <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl" />
+                            <Image src={project.img} alt={project.title} width={300} height={150} className="object-cover object-center aspect-[2/1] w-full m-1 p-1 rounded-2xl" unoptimized/>
                             <div className="flex flex-row min-w-full items-center justify-center flex-wrap  mb-5">
                                 {
                                     project.skills.map((pSkills, index) => (

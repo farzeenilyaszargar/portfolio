@@ -54,7 +54,7 @@ export default function ProjectPage() {
                 <Link key={proj.id} href={`/projects/${proj.id}`} className="border rounded-2xl overflow-hidden">
                   <div className="relative ">
                     <Image src={proj.img} alt={proj.title} width={200} height={100} className="min-w-full" />
-                    <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-10 "></div>
                   </div>
                   <p className="font-bold text-xl text-center m-1">{proj.title}</p>
                   <p className="text-zinc-400 pl-5 pr-5 mb-2 text-justify">{proj.description}</p>
@@ -75,8 +75,8 @@ export default function ProjectPage() {
               rightItems.map((proj: ProjProps) => (
                 <Link key={proj.id} href={`/projects/${proj.id}`} className="border rounded-2xl overflow-hidden">
                   <div className="relative ">
-                    <Image src={proj.img} alt={proj.title} width={200} height={100} className="min-w-full " />
-                    <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent"></div>
+                    <Image src={proj.img} alt={proj.title} width={200} height={100} className="min-w-full " unoptimized/>
+                    <div className="absolute bottom-0 left-0 w-full h-10"></div>
                   </div>
                   <p className="font-bold text-xl text-center m-1">{proj.title}</p>
                   <p className="text-zinc-400 pl-5 pr-5 mb-2 text-justify">{proj.description}</p>
