@@ -69,8 +69,8 @@ export default function Projects() {
 
                 </div>
                 
-                <Link href={'/projects'} className='group border border-border z-10 p-2 mt-10 rounded-2xl bg-text text-background text-center w-1/2 flex flex-row 
-                                                    justify-center items-center mb-10 hover:bg-background hover:text-text absolute top-1/3 left-1/4 shadow-[0_0_20px_rgba(0,0,0,1)]'>
+                <Link href={'/projects'} className='group border border-border z-10 p-2 mt-10 rounded-2xl bg-background text-tet text-center w-1/2 flex flex-row 
+                                                    justify-center items-center mb-10 hover:bg-text hover:text-background absolute top-1/3 left-1/4 shadow-[0_0_20px_rgba(0,0,0,1)]'>
                     <Image src={'/icons/link.png'} alt={'lol'} width={15} height={15} className='mr-1 w-4 h-4 child group-hover:invert' />
                     Check Out All My Projects!
 

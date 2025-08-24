@@ -43,7 +43,7 @@ const getRandomTailwindColor = (): string => {
 
 export default function ProjectPage() {
   return (
-    <div className="flex flex-col items-center bg-background text-text ">
+    <div className="flex flex-col items-center bg-background text-text  ">
       <Header />
       <div className="w-screen flex flex-col justify-center items-center mt-10">
         <h1 className="font-black text-2xl mb-10">projects</h1>
@@ -61,7 +61,7 @@ export default function ProjectPage() {
                   <div className="flex flex-row w-full justify-center items-center flex-wrap">
                     {
                       proj.skills.map((skill) => (
-                        <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 mb-2 ${getRandomTailwindColor()}`}>{skill}</p>
+                        <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-background ml-2 mr-2 mb-2 ${getRandomTailwindColor()}`}>{skill}</p>
 
                       ))
                     }
@@ -83,7 +83,7 @@ export default function ProjectPage() {
                   <div className="flex flex-row w-full justify-center items-center flex-wrap">
                     {
                       proj.skills.map((skill) => (
-                        <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 mb-2 ${getRandomTailwindColor()}`}>{skill}</p>
+                        <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-background ml-2 mr-2 mb-2 ${getRandomTailwindColor()}`}>{skill}</p>
 
                       ))
                     }

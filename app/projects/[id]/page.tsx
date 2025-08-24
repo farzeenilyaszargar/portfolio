@@ -47,7 +47,7 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
         <div className='flex flex-col items-center justify-between min-h-screen m-0 p-0 bg-background text-text'>
             <Header />
             <div className="w-2/3 flex flex-col justify-center items-center  mt-10">
-                <h1 className="font-black text-2xl mt-5">{proj.title}</h1>
+                <h1 className="font-black text-4xl mt-5 mb-2">{proj.title}</h1>
                 <p className="text-zinc-500 font-light mb-2">{proj.description}</p>
                 {proj.linkWeb
                     ? <Link href={proj.linkWeb} className="border rounded-xl pl-2 pr-2 bg-background text-text transition-all duration-100 ease-in hover:invert">Check Out Here!</Link>
