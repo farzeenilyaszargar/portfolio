@@ -1,7 +1,7 @@
 
 import React from "react";
 import { siJavascript, siReact, siNextdotjs, siTailwindcss, siC, siPython, siRust, siMysql, siFigma, siPandas, siSupabase, siGo, 
-      siTypescript, siRaspberrypi, siGraphql, siGithub, siCss, siPostgresql, siTensorflow, siDocker, siFastapi } from "simple-icons/icons";
+      siTypescript, siRaspberrypi, siGraphql, siGithub, siCss, siPostgresql, siTensorflow, siDocker, siFastapi, siKeras } from "simple-icons/icons";
 
 type IconDef = { title: string; path: string };
 
@@ -27,6 +27,7 @@ const ICONS: IconDef[] = [
   { title: "TensorFlow", path: siTensorflow.path },
   { title: "Docker", path: siDocker.path },
   { title: "FastAPI", path: siFastapi.path },
+  {title: "Keras", path: siKeras.path},
 
 ];
 

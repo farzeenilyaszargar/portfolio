@@ -12,7 +12,7 @@ export default function HeroSection()
                 <div>
                     <h1 className='font-normal text-3xl'>I&apos;m a</h1>
                     {/*<Image src='/soft-dev.gif' alt='gif' width={400} height={300}></Image>*/}
-                    <h1 className='font-black text-3xl hover:border-b-2  transition-all duration-50'>Software Developer</h1>
+                    <h1 className='font-black text-3xl hover:border-text border-b-2 border-background  transition-colors duration-50 mb-2'>Software Developer</h1>
 
                     <div className='flex flex-row items-center gap-1'>
                         <Image src='/icons/location-pin.png' alt='location-pin' width={15} height={15} className="hover:scale-110"></Image>

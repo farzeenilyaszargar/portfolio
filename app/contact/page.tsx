@@ -32,7 +32,7 @@ export default function Home() {
   }
 
   return (
-    <div className='h-screen flex flex-col justify-between bg-background text-text'>
+    <div className='h-screen flex flex-col justify-between items-center bg-background text-text'>
       <Header />
       <div className=' flex justify-center items-center '>
 

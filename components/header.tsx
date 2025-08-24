@@ -36,21 +36,28 @@ export default function Header() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+
     useEffect(() => {
-        const stored = localStorage.getItem("darkMode");
-        if (stored !== null) {
-            setDarkMode(JSON.parse(stored));
-        }
+        const storedMode = localStorage.getItem('darkMode');
+        const isDark = storedMode === 'true';
+        setDarkMode(isDark);
+        document.documentElement.classList.toggle('dark', isDark);
     }, []);
 
-    // Save to localStorage whenever darkMode changes
-    useEffect(() => {
-        localStorage.setItem("darkMode", JSON.stringify(darkMode));
-    }, [darkMode]);
+    const toggleDarkMode = () => {
+        setDarkMode(prev => {
+            const newMode = !prev;
+            localStorage.setItem('darkMode', `${newMode}`);
+            document.documentElement.classList.toggle('dark', newMode);
+            return newMode;
+        });
+    };
+
+
 
 
     return (
-        <div className="flex justify-around items-center h-12 mt-2 border-b border-border --font-mine w-full ">
+        <div className="flex justify-around items-center h-12 mt-2 border-b border-border --font-mine w-2/3 ">
             <Link href={'/'} className="text-2xl font-bold line-clamp-1">Farzeen Ilyas Zargar</Link>
             {/*-------------------*/}
             {
@@ -65,17 +72,15 @@ export default function Header() {
             {/*-------------------*/}
 
 
-            <button onClick={() => {
-                setDarkMode(!darkMode)
-                document.documentElement.classList.toggle('dark');
-            }
-            }>
-                {
-                    darkMode ? ('☀️') : ('🌙')
-                }
+            <button onClick={toggleDarkMode}>
+                {darkMode ? (
+                    <Image src="/icons/sun.png" alt="sun" width={25} height={25} className="invert-[var(--my-invert)]"/>
+                ) : (
+                    <Image src="/icons/moon.png" alt="moon" width={25} height={25} className="invert-[var(--my-invert)]"/>
+                )}
             </button>
             <Link href={'/resume.pdf'} className={`border  items-center p-1 pl-2 pr-3 pb-1 rounded-2xl  hidden md:flex hover:invert bg-background`}>
-                <Image src={"/icons/download.png"} alt="download-icon" className={`w-4 h-4 mr-1 mt-0.5 invert-[var(--my-invert)]`} width={25} height={25}  />
+                <Image src={"/icons/download.png"} alt="download-icon" className={`w-4 h-4 mr-1 mt-0.5 invert-[var(--my-invert)]`} width={25} height={25} />
                 resume
 
             </Link>

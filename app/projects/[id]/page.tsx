@@ -50,7 +50,7 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
                 <h1 className="font-black text-2xl mt-5">{proj.title}</h1>
                 <p className="text-zinc-500 font-light mb-2">{proj.description}</p>
                 {proj.linkWeb
-                    ? <Link href={proj.linkWeb} className="border rounded-xl pl-2 pr-2 bg-white transition-all duration-100 ease-in hover:invert">Check Out Here!</Link>
+                    ? <Link href={proj.linkWeb} className="border rounded-xl pl-2 pr-2 bg-background text-text transition-all duration-100 ease-in hover:invert">Check Out Here!</Link>
                     : <></>}
 
                 {
@@ -59,7 +59,7 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
                         :
                         <></>
                 }
-                <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-black " unoptimized/>
+                <Image src={proj.img} alt={proj.title} width={200} height={100} className="w-3/4 rounded-lg mt-5 border border-border " unoptimized/>
 
 
 
@@ -71,7 +71,7 @@ export default async function ProjectPage({ params, }: { params: Promise<{ id: s
 
                     {
                         proj.skills.map((skill) => (
-                            <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-white ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
+                            <p key={skill} className={`border rounded-xl pl-2 pr-2 bg-background ml-2 mr-2 ${getRandomTailwindColor()}`}>{skill}</p>
 
                         ))
                     }

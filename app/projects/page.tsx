@@ -43,7 +43,7 @@ const getRandomTailwindColor = (): string => {
 
 export default function ProjectPage() {
   return (
-    <div className="bg-background text-text overflow-hidden">
+    <div className="flex flex-col items-center bg-background text-text ">
       <Header />
       <div className="w-screen flex flex-col justify-center items-center mt-10">
         <h1 className="font-black text-2xl mb-10">projects</h1>
