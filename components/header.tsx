@@ -79,8 +79,8 @@ export default function Header() {
                     <Image src="/icons/moon.png" alt="moon" width={25} height={25} className="invert-[var(--my-invert)]"/>
                 )}
             </button>
-            <Link href={'/resume.pdf'} className={`border  items-center p-1 pl-2 pr-3 pb-1 rounded-2xl  hidden md:flex hover:invert bg-background`}>
-                <Image src={"/icons/download.png"} alt="download-icon" className={`w-4 h-4 mr-1 mt-0.5 invert-[var(--my-invert)]`} width={25} height={25} />
+            <Link href={'/resume.pdf'} className={`border  items-center p-1 pl-2 pr-3 pb-1 rounded-2xl  hidden md:flex hover:invert bg-text text-background`}>
+                <Image src={"/icons/download.png"} alt="download-icon" className={`w-4 h-4 mr-1 mt-0.5 invert-[var(--reverse-invert)]`} width={25} height={25} />
                 resume
 
             </Link>
